@@ -6,6 +6,7 @@ const TripSchema = new mongoose.Schema(
     tripName: {
       type: String,
       required: [true, "Please include a {PATH}!"],
+      unique: true,
       minlength: [2, "{PATH} must be at least {MINLENGTH} characters!"],
     },
     startDate: {
@@ -23,13 +24,18 @@ const TripSchema = new mongoose.Schema(
       required: [true, "...tbd...  {PATH}!"],
       maxlength: [255, "{PATH} ...tbd... {MAXLENGTH} ...!"],
     },
-
+    // TODO: determine if type needs to change
     packingList: {
-      type: String,
+      type: [String],
       required: [true, "...tbd...  {PATH}!"],
     },
+    packingListName: {
+      type: String,
+      required: [true, "...tbd...  {PATH}!"],
+      maxlength: [500, "{PATH} ...tbd... {MAXLENGTH} ...!"],
+    },
 
-    // TBD: {
+    // TBD/create a packing list?: {
     //     type: String,
     //     required: [true, "...tbd...  {PATH}!"],
     //     maxlength: [255, "{PATH} ...tbd... {MAXLENGTH} ...!"],
