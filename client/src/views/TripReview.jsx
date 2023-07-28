@@ -11,14 +11,6 @@ const TripReview = () => {
   const tripState = useContext(StoreContext);
 
 
-  //TODO: TRYING TO FIX NAVIGATE
-//     // like a redirect
-//     const navigator = useNavigate();
-
-// const handleSavedComplete = () => {
-//   navigator("/trip/savedtrips");
-// };
-
   return (
     <div>
       <h3>TripReview</h3>
@@ -47,7 +39,7 @@ const TripReview = () => {
         </ul>
       </div>
       {/* <Save onSaveComplete={handleSavedComplete}/> */}
-      <Link to={`/trip/savedtrips`}><Save/></Link>
+      <a href={`/trip/savedtrips`}><Save/></a>
       <HomeButton />
     </div>
   );

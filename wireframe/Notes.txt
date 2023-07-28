@@ -24,13 +24,13 @@ Api Research:
 TODOs:
 X - Convert all packing lists (in the index.js folder in src)
 
-- Update switch in the ListSelect.jsx
+X - Update switch in the ListSelect.jsx
 
 - Hook up weather API (need to add weather type in list context - from destination page to weather page to pack page)
 
 - Add temp avg, rain, snow, sun (calling weather api on weather page and the pack page) - hitting api from 2 pages OR store to context
 
-- Edit field is not talking to axios, what happens if I go to update my name of a trip to a name that already exists? // NEED TO BE ABLE TO UPDATE USING THE EDIT page
+X - Edit field is not talking to axios, what happens if I go to update my name of a trip to a name that already exists? // NEED TO BE ABLE TO UPDATE USING THE EDIT page
 
 - If you're able to pull AT LEAST TEMP from weather api, then reduce the number of pre-selected packlists (ex: if rainy "FILTER" the lists) - lists.filter... if sunny filter out any that refer to rain, etc.
 

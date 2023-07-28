@@ -158,10 +158,10 @@ const handleSubmit = (e) => {
           <p style={errStyle}>{packingListErr}</p>
           <label>Packing List Name </label>
           <input
-            name="packingList"
+            name="packingListName"
             type="text"
             onChange={handleChange}
-            value={formData.packingList}
+            value={formData.packingListName}
           />
           <br />
           {/* <label>List Items </label>

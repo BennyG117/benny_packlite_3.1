@@ -1,3 +1,4 @@
+
 //DOUBLE CHECK Module.exports NAMES & FOLDER/FILE NAMES IN Const
 const Trip = require("../models/trip.model");
 
@@ -64,4 +65,5 @@ module.exports = {
         res.status(400).json(err);
       });
   },
+
 };

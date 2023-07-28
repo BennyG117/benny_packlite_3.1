@@ -23,4 +23,5 @@ module.exports = (app) => {
 
   //delete - delete w/ id
   app.delete("/api/trips/:id", tripController.deleteTrip);
+
 };
