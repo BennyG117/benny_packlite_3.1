@@ -18,7 +18,7 @@ function App() {
   return (
     <div className="App">
       <h1>Benny Pack Lite 2.0</h1>
-      <hr />
+      <br />
       <StoreProvider>
         <Routes>
           <Route path="/" element={<Dashboard />}/>

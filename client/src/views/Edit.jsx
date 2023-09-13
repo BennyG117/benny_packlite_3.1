@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import Delete from "../components/Delete";
 import axios from "axios";
+import { weatherKey } from "../env";
+import StoreContext from "../TripContext";
 
 const Edit = () => {
   
@@ -111,6 +113,81 @@ const handleSubmit = (e) => {
     fontweight: "bold",
   };
 
+  //********************* */
+// //quick add weather:
+
+// const [icon, setIcon] = useState("#");
+// const [avgtemp, setAvgtemp] = useState(null);
+// const [maxtemp, setMaxtemp] = useState(null);
+// const [mintemp, setMintemp] = useState(null);
+// const [chanceOfRain, setChanceOfRain] = useState(false);
+// const [chanceOfSnow, setChanceOfSnow] = useState(false);
+
+// // carry over user submitted infor from previous page
+// // const { id } = useParams();
+
+// //use navigator with onSubmit in the form to transfer user to the list select page
+// // const navigator = useNavigate();
+
+// //using tripState to hold state and carry over (global state)
+// const tripState = useContext(StoreContext);
+
+// useEffect(() => {
+//   getWeather(tripState.startDate, tripState.destination);
+// }, []);
+
+// const isItGonnaRain = (hours) => {
+//   const result = false;
+//   hours.forEach((hour) => {
+//     if (hour.chance_of_rain > 0) {
+//       result = true;
+//     }
+//   });
+// };
+// const isItGonnaSnow = (hours) => {
+//   const result = false;
+//   hours.forEach((hour) => {
+//     if (hour.chance_of_snow > 0) {
+//       result = true;
+//     }
+//   });
+
+//   //go through each day and if chance of rain is > 20 set result to true
+//   return result;
+// };
+
+// const getWeather = (date = "2023-01-01", place = "Denver") => {
+//   axios
+//     .get(
+//       `https://api.weatherapi.com/v1/history.json?q=${place}&dt=${date}&key=${weatherKey}`
+//     )
+
+//     .then((res) => {
+//       const weatherData = res.data;
+//       const day = weatherData.forecast.forecastday[0].day;
+//       const hour = weatherData.forecast.forecastday[0].hour;
+//       setIcon(day.condition.icon);
+
+//       // console.log(avgtemp);
+//       setAvgtemp(day.avgtemp_f);
+
+//       // console.log(maxtemp);
+//       setMaxtemp(day.maxtemp_f);
+
+//       // console.log(mintemp);
+//       setMintemp(day.mintemp_f);
+
+//       setChanceOfSnow(isItGonnaSnow(hour));
+//       setChanceOfRain(isItGonnaRain(hour));
+//     })
+//     .catch((err) => {
+//       console.error(err);
+//     });
+// };
+
+
+
+  //********************* */
 
   return (
 <div>
@@ -153,6 +230,10 @@ const handleSubmit = (e) => {
             onChange={handleChange}
             value={formData.destination}
           />
+          {/* <br />
+          <p>Average Weather:</p>
+          <p>Average Temp: {avgtemp}f</p>
+        <img src={icon} alt="weather icon" /> */}
           <br />
           {/* //! CONTINUE TO COMPLETE HERE */}
           <p style={errStyle}>{packingListErr}</p>
